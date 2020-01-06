@@ -5,17 +5,22 @@
 @color-variacion:#012179;
 @fuente1:'Lato', san-serif;
 @fuente2:'Oswald', san-serif;
+//variable declarada pa usar en una funcion matematica
+@fuente-base:18px ;
 
 *{
     box-sizing: border-box;
 }
 body{
     margin: 0;
-    font-family: 'Lato', san-serif;
+    font-family: @fuente1;
+    color: @color-primario;
+    //funcion matematica para aumentar en base a la variable de fuente-base el line-height 
+    line-height: @fuente-base + 10%;
 }
 
 h1,h2,h3{
-    font-family: 'Oswald', sans-serif;
+    font-family: @fuente2;
     text-transform: uppercase;
     margin: 0;
 }
