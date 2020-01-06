@@ -7,6 +7,21 @@
 @fuente2:'Oswald', san-serif;
 //variable declarada pa usar en una funcion matematica
 @fuente-base:18px ;
+//mixin
+.sombra-caja {
+    box-shadow: 0px 5px 15px 0px fade(@color-primario, 50%);
+}
+.Oswald {
+    font-family: @fuente2;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+//variable con parámetros
+.fuente(@font-size){
+    font-size: @font-size;
+    line-height: @font-size + 10%;
+}
+
 
 *{
     box-sizing: border-box;
@@ -16,11 +31,10 @@ body{
     font-family: @fuente1;
     color: @color-primario;
     //funcion matematica para aumentar en base a la variable de fuente-base el line-height 
-    line-height: @fuente-base + 10%;
+    .fuente(@fuente-base);
 }
 
 h1,h2,h3{
-    font-family: @fuente2;
-    text-transform: uppercase;
     margin: 0;
+    .Oswald;
 }
