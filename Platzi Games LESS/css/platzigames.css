@@ -1,11 +1,12 @@
 .sombra-caja {
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.5);
-  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.5);
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.1);
+  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.1);
 }
 .Oswald {
   font-family: 'Oswald', san-serif;
   text-transform: uppercase;
   font-weight: 700;
+  color: #ffffff;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -14,7 +15,8 @@
 body {
   margin: 0;
   font-family: 'Lato', san-serif;
-  color: #333333;
+  color: #ffffff;
+  background-color: #333333;
   font-size: 18px;
   line-height: 28px;
 }
@@ -25,6 +27,7 @@ h3 {
   font-family: 'Oswald', san-serif;
   text-transform: uppercase;
   font-weight: 700;
+  color: #ffffff;
 }
 .intro {
   width: 1340px;
@@ -32,9 +35,9 @@ h3 {
   margin: 0 auto;
   padding: 10px;
   position: relative;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.5);
-  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.5);
+  background-color: #8841da;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.1);
+  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.1);
 }
 .intro__imagen {
   width: 1320px;
@@ -60,6 +63,7 @@ h3 {
   font-family: 'Oswald', san-serif;
   text-transform: uppercase;
   font-weight: 700;
+  color: #ffffff;
   color: rgba(255, 255, 255, 0.5);
 }
 .intro__titulo {
@@ -103,6 +107,7 @@ h3 {
   font-size: 50px;
   line-height: 60px;
   text-align: center;
+  color: #8841da;
 }
 .articulo--principal h3 {
   color: #8841da;
@@ -119,23 +124,24 @@ h3 {
 }
 .caja {
   max-width: 430px;
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.5);
-  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.5);
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.1);
+  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.1);
 }
 .caja__contenido {
   padding: 25px;
-  background-color: #ffffff;
+  background-color: #8841da;
 }
 .caja span {
   color: #8841da;
   font-family: 'Oswald', san-serif;
   text-transform: uppercase;
   font-weight: 700;
+  color: #ffffff;
 }
 .caja a {
   text-decoration: none;
-  color: #012179;
   font-family: 'Oswald', san-serif;
   text-transform: uppercase;
   font-weight: 700;
+  color: #ffffff;
 }
