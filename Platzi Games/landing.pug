@@ -1,9 +1,20 @@
 //- -----VARIABLES----
   //-Forma de declarar variables en pug
 -var titulo = "Título Principal"
--var titulos = ["Título Principal", "Subtitul 1","Subtitul 2","Subtitul 3"]//-Variable con varios datos
+-var titulos = ["Título Principal", "Subtitulo 1","Subtitulo 2","Subtitulo 3"]//-Variable con varios datos
+//- -var usuario = "David"
 
 //- /-----VARIABLES----
+//- -----MIXIN------
+mixin caja(imagen, titulo,contenido)
+      .caja
+        .caja__imagen: img(src="images/"+imagen)
+        .caja__contenido
+          h3=titulo
+          p=contenido
+          //- Creación de mixin para reutilizarlo dentro de alguna sección/ mixin es un pedazo de código que es reutilizable
+          a.buton Leer más
+//- /----MIXIN------
 
 doctype html
 html 
@@ -15,7 +26,12 @@ html
     body
       header
         h1 PlatziGames
-        a.boton Registro
+        if usuario
+          a Hola #{usuario}
+          //-Forma de crear y llamr un condicional/ En este caso --> Si usuario(la variable "usuario" existe- hacer:) un enlace #{(variable)}
+        else
+          a.boton Registro
+          //-Si no--> crear un boton enlazado : Registro.
       section.intro
         .intro__imagen: img(src="images/imagen.png")
         .intro__contenido 
@@ -34,7 +50,15 @@ html
           a.boton Leer Mas
           //- para guardar un elemento dentro de otro se indenta el elemento hijo debajo del elemento padre
           //-para la identación en pug o se usan espacios o se usan tabs, no ambos.
-      
+      //- ul 
+      //-   each titulo in titulos
+      //-     li= titulo 
+          //-Forma de crear y llamar un loop/Es una repetición de un segmento decódigo--> each(loop) titulo(variable PRVISIONAL) in(de donde va a traer la variable) titulos(Variables que tiene el segmento que queremos traer) 
+    main.contenido
+      +caja('imagen.png',titulos[1], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' )
+      //-Forma de llamar al mixin, que no es más que un pedazo de código que se crea para poder reultizarlo en la sección deseada.
+      +caja('imagen.png',titulos[2], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' )
+      +caja('imagen.png',titulos[3], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' )
 
 
 
