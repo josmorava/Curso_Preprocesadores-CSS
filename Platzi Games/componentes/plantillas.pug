@@ -1,0 +1,9 @@
+include configuraciones.pug
+doctype html
+html 
+  include head.pug
+  body
+    include header.pug
+    block contenidos 
+      //- block contenidos permite que al hacer el extend lea este código.  
+    include footer.pug

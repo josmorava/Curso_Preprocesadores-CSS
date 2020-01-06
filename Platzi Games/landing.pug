@@ -1,53 +1,22 @@
-//- -----VARIABLES----
-  //-Forma de declarar variables en pug
--var titulo = "Título Principal"
--var titulos = ["Título Principal", "Subtitulo 1","Subtitulo 2","Subtitulo 3"]//-Variable con varios datos
-//- -var usuario = "David"
-
-//- /-----VARIABLES----
-//- -----MIXIN------
-mixin caja(imagen, titulo,contenido)
-      .caja
-        .caja__imagen: img(src="images/"+imagen)
-        .caja__contenido
-          h3=titulo
-          p=contenido
-          //- Creación de mixin para reutilizarlo dentro de alguna sección/ mixin es un pedazo de código que es reutilizable
-          a.buton Leer más
-//- /----MIXIN------
-
-doctype html
-html 
-  head
-    meta(charset="UTF-8") 
-    //-para agregar los atributos de las etiquetas se meten dentro de parentesis()
-
-    link(rel="stylesheet" , href="css/ejercicio-pug.css")
-    body
-      header
-        h1 PlatziGames
-        if usuario
-          a Hola #{usuario}
-          //-Forma de crear y llamr un condicional/ En este caso --> Si usuario(la variable "usuario" existe- hacer:) un enlace #{(variable)}
-        else
-          a.boton Registro
-          //-Si no--> crear un boton enlazado : Registro.
-      section.intro
-        .intro__imagen: img(src="images/imagen.png")
-        .intro__contenido 
-          h2 #{titulos[0]} 
+//-extend me permite traer codigo de una ruta y además da un paso adicional para agregar más código, hay que especificarle que aparte del código que traiga lea también el que ya está.
+extend componentes/plantillas.pug
+block contenidos 
+    section.intro
+      .intro__imagen: img(src="images/imagen.png")
+      .intro__contenido 
+        h2 #{titulos[0]} 
           //-Forma de llamar variables
-          p
-            | Lorem ipsum  dolor sit 
-            | amet consectet adipisicing 
-            | elit.  Adipisci error autem 
-            | consequatur ullam sapiente,
-            |  officiis culpa ut iusto
-            |  vel commodi voluptas unde 
-            | dicta dolores minus
-            | possimus tenetur et hic? Nam!
-            span Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perspiciatis quasi quo expedita nemo, consequatur fugiat itaque consequuntur delectus asperiores, sit vitae cum nam architecto, laudantium veniam fugit voluptates animi?
-          a.boton Leer Mas
+        p
+          | Lorem ipsum  dolor sit 
+          | amet consectet adipisicing 
+          | elit.  Adipisci error autem 
+          | consequatur ullam sapiente,
+          |  officiis culpa ut iusto
+          |  vel commodi voluptas unde 
+          | dicta dolores minus
+          | possimus tenetur et hic? Nam!
+          span Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perspiciatis quasi quo expedita nemo, consequatur fugiat itaque consequuntur delectus asperiores, sit vitae cum nam architecto, laudantium veniam fugit voluptates animi?
+        a.boton Leer Mas
           //- para guardar un elemento dentro de otro se indenta el elemento hijo debajo del elemento padre
           //-para la identación en pug o se usan espacios o se usan tabs, no ambos.
       //- ul 
@@ -58,8 +27,4 @@ html
       +caja('imagen.png',titulos[1], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' )
       //-Forma de llamar al mixin, que no es más que un pedazo de código que se crea para poder reultizarlo en la sección deseada.
       +caja('imagen.png',titulos[2], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' )
-      +caja('imagen.png',titulos[3], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' )
-
-
-
-  
+      +caja('imagen.png',titulos[3], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' ) 

@@ -1,0 +1,17 @@
+//- -----VARIABLES----
+  //-Forma de declarar variables en pug
+-var titulo = "Título Principal"
+-var titulos = ["Título Principal", "Subtitulo 1","Subtitulo 2","Subtitulo 3"]//-Variable con varios datos
+//- -var usuario = "David"
+-var enlaces = ["Acerca", "Noticias", "Contacto"]
+
+//- /-----VARIABLES----
+//- -----MIXIN------
+mixin caja(imagen, titulo,contenido)
+  .caja
+    .caja__imagen: img(src="images/"+imagen)
+    .caja__contenido
+      h3=titulo
+      p=contenido
+    //- Creación de mixin para reutilizarlo dentro de alguna sección/ mixin es un pedazo de código que es reutilizable
+//- /----MIXIN------
