@@ -6,12 +6,20 @@ $color-claro: #ffffff;
 $color-secundario: #8841da;
 $color-variacion: #3f579a;
 
+//ar,ando un mixin
 @mixin caja{
   color: $color-primario;
   box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.50);
   border-radius: 20px;
   background-color: $color-claro;
 }
+
+//armando una funcion, que a diferencia del mixin es que en la funcion puedes decidir que mandas a llamr cuando la uses.
+@function get-opacity($color, $nivel) {
+  //funcion de less que permite aplicar opacidad. 
+  @return rgba($color,$nivel);
+}
+
 
 *{
   box-sizing: border-box;

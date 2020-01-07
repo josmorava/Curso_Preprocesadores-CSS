@@ -21,6 +21,10 @@
     text-align: center;
     font-size: 12px;
     font-weight: 700;
+    //llamando a la función
+    color: get-opacity($color-claro, .50);
+    
+
   }
   &__boton{
     display: block;
@@ -34,6 +38,8 @@
     text-align: center;
     font-family: $fuente2;
     color: $color-claro;
+    background-color: get-opacity($color-primario, .20);
+    border: 2px solid get-opacity($color-claro, .30);
   }
 }
 .perfil__minibio {
