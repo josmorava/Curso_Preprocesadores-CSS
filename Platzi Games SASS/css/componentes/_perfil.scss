@@ -1,13 +1,13 @@
 .perfil {
-  width: 50%;
+  width: 40%;
   padding-top: 50px;
   color: $color-claro;
-  background-color: $color-secundario;
+  background-color: $color-grey;
   //hijo directo
   &__avatar {
     display: block;
     margin: 0 auto;
-    border-radius: 50em;
+    border-radius: 30%;
   }
   &__nombre {
     @include titulos($fuente2);
@@ -21,20 +21,20 @@
     font-size: 12px;
     font-weight: 700;
     //llamando a la función
-    color: get-opacity($color-claro, .50);
+    @include titulos($fuente1);
   }
   &__boton {
     display: block;
     width: 100px;
     height: 40px;
     margin: 15px auto;
-    padding-top:15px ;
+    padding-top: 6px ;
     border-radius: 20px;
     text-decoration: none;
     text-align: center;
     @include titulos($fuente2);
     color: $color-claro;
-    background-color: get-opacity($color-primario, .20);
+    background-color: $color-primario;
     border: 2px solid get-opacity($color-claro, .30);
   }
 }

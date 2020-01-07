@@ -2,6 +2,7 @@
 $fuente1: 'Lato', sans-serif;
 $fuente2: 'Oswald', sans-serif;
 $color-primario: #333333;
+$color-grey: #f7f7f7;
 $color-claro: #ffffff;
 $color-secundario: #8841da;
 $color-variacion: #3f579a;
@@ -9,7 +10,7 @@ $color-variacion: #3f579a;
 //ar,ando un mixin
 @mixin caja{
   color: $color-primario;
-  box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.50);
+  box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.50);
   border-radius: 20px;
   background-color: $color-claro;
 }
@@ -33,9 +34,11 @@ $color-variacion: #3f579a;
 @mixin titulos($fuente) {
   @if $fuente==$fuente1  {
     font-family: $fuente1;
+    color: $color-variacion;
   } @else {
     font-family: $fuente2;
     text-transform: uppercase;
+    color: $color-secundario;
   }
 }
 
@@ -50,5 +53,5 @@ body{
 main {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
