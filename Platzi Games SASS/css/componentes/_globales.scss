@@ -20,6 +20,24 @@ $color-variacion: #3f579a;
   @return rgba($color,$nivel);
 }
 
+//Loop: corre un pedaso de codigo hasta que cierta condicion es alcanzada
+@each $header, $size in (h1: 30px, h2: 25px , h3: 20px) {
+  //llamando variable
+  #{$header} {
+    font-size: $size;
+    margin: 0;
+  }
+}
+
+//mixin con condicional
+@mixin titulos($fuente) {
+  @if $fuente==$fuente1  {
+    font-family: $fuente1;
+  } @else {
+    font-family: $fuente2;
+    text-transform: uppercase;
+  }
+}
 
 *{
   box-sizing: border-box;
@@ -27,7 +45,7 @@ $color-variacion: #3f579a;
 }
 body{
   margin: 0;
-  font-family: $fuente1;
+  @include titulos($fuente1);
 }
 main {
   display: flex;
