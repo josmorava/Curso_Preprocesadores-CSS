@@ -1,19 +1,19 @@
 .contenido
-  margin-bottom: 4px  
+  margin-bottom: 40px  
   justify-content: space-evenly  //alinear de forma horizontal
   contenedor() //mixin y variables siempre al final de codigo- buena practica
 
 .caja
-  max-width: 430px
+  border: 1px solid #989695 
+  max-width: 402px
+  border-radius: 4px
   caja-sombra()
   &__contenido
     padding: 20px
     background-color: color-claro
     span 
-      text-transform: uppercase
+      titulos(fuente2)
       color: color-secundario
-      font-family: fuente2
     h3 
-      text-transform: uppercase
+      titulos(fuente2)
       font-weight: normal
-      font-family: fuente2

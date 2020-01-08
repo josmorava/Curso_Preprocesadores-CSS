@@ -19,11 +19,26 @@ caja-sombra()
 //funciones: parecido al mixon solo que trae lo que se le diga que va a plaicar
 opacidad(color, cantidad)
   alpha(color, cantidad)
-  
+
+titulos(fuente)
+  if fuente == fuente1
+    font-family: fuente1
+  else 
+    font-family: fuente2
+    font-weight: 600
+    text-transform: uppercase
+
+
+//loop: corre un codigo hasta que una condicion se alcanza
+for header in 3 2 1 
+  h{header}
+    font-size: 35px - (5*header)
+    margin: 0
+    //decarando un selector "h" 1 2 3 que va a tener en h1 35px y 2,3 se va reducir en 5 cada uno
 *
   box-sizing: border-box
 
 body
   margin: 0
-  font-family : fuente1
+  titulos(fuente1)
   color: color-primario
